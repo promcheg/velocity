@@ -13,14 +13,14 @@ public abstract class VelocityDrawable {
 	 * @param y
 	 * @return
 	 */
-	public static VelocityDrawable create(VelocityDrawableEntities entityType, int x, int y) {
+	public static VelocityDrawable create(VelocityDrawableEntities entityType, int x, int y, int width, int height) {
 		VelocityPoint result;
 		switch(entityType) {
 		case CIRCLE:
 		case LINE:
 		case POINT:
 		default:
-			result =new VelocityPoint(x, y);
+			result =new VelocityPoint(x, y, width, height);
 			result.setCaption("Point_"+idx++);
 			return result;
 		}
@@ -30,5 +30,5 @@ public abstract class VelocityDrawable {
 	public abstract String getCaption();
 	public abstract void setCaption(String caption);
 
-	protected abstract void onCanvasResize(int oldWidth, int oldHeight, int width, int height);
+	protected abstract void onCanvasResize(int width, int height);
 }

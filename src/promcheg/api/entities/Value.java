@@ -1,5 +1,7 @@
 package promcheg.api.entities;
 
+import java.util.Arrays;
+
 /**
  * 
  * @author promc
@@ -36,4 +38,10 @@ public abstract class Value<T> {
 	}
 	
 	public abstract T convertToUnit(UnitType resultUnit) throws NumberFormatException;
+	
+	public abstract UnitType[] getAlowedUnitList();
+	
+	public boolean isAlowedUnitType(UnitType type) {
+		return Arrays.binarySearch(getAlowedUnitList(), type) >= 0;
+	}
 }
