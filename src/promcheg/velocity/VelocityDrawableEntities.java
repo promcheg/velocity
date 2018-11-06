@@ -1,4 +1,4 @@
-package com.googlemail.at.promcheg75.velocity;
+package promcheg.velocity;
 
 public enum VelocityDrawableEntities {
 	POINT,

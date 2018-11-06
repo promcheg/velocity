@@ -1,4 +1,4 @@
-package com.googlemail.at.promcheg75.velocity;
+package promcheg.velocity;
 
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
