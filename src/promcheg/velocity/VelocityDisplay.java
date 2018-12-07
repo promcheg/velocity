@@ -217,7 +217,7 @@ public class VelocityDisplay  {
 					@Override
 					public String isValid(String check) {
 						try {
-							double value = Double.parseDouble(check);
+							Double.parseDouble(check);
 						} catch(Exception ex) {
 							return ex.getMessage();
 						}

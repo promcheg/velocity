@@ -53,4 +53,9 @@ public class SpeedValue extends Value<BigDecimal> {
 					UnitType.METER_PER_SECOND
 					};
 	}
+
+	@Override
+	public void parseValue(String stringValue) {
+		this.setValue(new BigDecimal(stringValue));
+	}
 }
